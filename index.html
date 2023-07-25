@@ -1,11 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fruit Brust</title>
+    <!-- Tailwind css and daisyul cdn -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@3.4.0/dist/full.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Open+Sans:wght@300;800&family=Work+Sans:wght@100;200;300;400;600;700&display=swap"
+        rel="stylesheet">
+    <!-- Custom color for tailwind css -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        clifford: '#F85559',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .font-family {
+            font-family: 'Lato', sans-serif;
+        }
+    </style>
 </head>
-<body>
-    
+
+<body class="mx-auto font-family">
+    <header class="container mx-auto">
+        <nav class="my-12">
+            <div class="navbar bg-clifford lg:rounded-full rounded-2xl lg:p-10">
+                <div class="navbar-start">
+                    <div class="flex-none">
+                        <ul class="menu menu-horizontal px-1 text-white text-xl">
+                            <li><a>Home</a></li>
+                            <li><a>About Us</a></li>
+                            <li><a>Shop</a></li>
+                            <li><a>All Fruits</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="navbar-center">
+                    <img src="images/logo.png" alt="">
+                    <a class="text-5xl text-white font-bold ml-5">Fruit Burst</a>
+                </div>
+                <div class="navbar-end">
+                    <div class="form-control">
+                        <input type="text" placeholder="Search here"
+                            class="input input-bordered md:w-auto w-40 pr-32 pl-5 rounded-2xl" />
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <section>
+            <div class="hero min-h-screen" style="background-image: url('images/banner1.png');">
+                <div class="hero-overlay bg-opacity-35"></div>
+                <div class="hero-content text-center text-neutral-content">
+                    <div class="max-w-2xl">
+                        <h1 class="mb-5 text-7xl font-extrabold w-full text-white">Exotic tastes at your <br> doorstep</h1>
+                        <p class="mb-5 text-white text-xl font-medium">
+                            We supply highly quality organic products
+                        </p>
+                        <button class="btn btn-primary text-white font-extrabold text-xl">Shop Now</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </header>
+    <main>
+
+    </main>
+    <footer>
+
+    </footer>
 </body>
+
 </html>
