@@ -41,28 +41,40 @@
 <body class="mx-auto font-family">
     <header class="container mx-auto">
         <nav class="my-12">
-            <div class="navbar bg-color lg:rounded-full rounded-2xl lg:p-10">
-                <div class="navbar-start">
-                    <div class="flex-none">
-                        <ul class="menu menu-horizontal px-1 text-white text-xl">
-                            <li><a>Home</a></li>
-                            <li><a>About Us</a></li>
-                            <li><a>Shop</a></li>
-                            <li><a>All Fruits</a></li>
-                        </ul>
-                    </div>
+            <div class="navbar lg:bg-color lg:rounded-full rounded-2xl lg:p-10">
+                <div class="lg:navbar-start">
+                  <div class="dropdown">
+                    <label tabindex="0" class="btn btn-ghost lg:hidden">
+                      <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
+                    </label>
+                    <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+                        <li><a>Home</a></li>
+                        <li><a>About Us</a></li>
+                        <li><a>Shop</a></li>
+                        <li><a>All Fruits</a></li>
+                    </ul>
+                  </div>
+                </div>
+                
+                <div class="navbar-start hidden lg:flex">
+                    <ul class="menu menu-horizontal px-1 text-white text-xl">
+                        <li><a>Home</a></li>
+                        <li><a>About Us</a></li>
+                        <li><a>Shop</a></li>
+                        <li><a>All Fruits</a></li>
+                    </ul>
                 </div>
                 <div class="navbar-center">
                     <img src="images/logo.png" alt="">
-                    <a class="text-5xl text-white font-bold ml-5">Fruit Burst</a>
+                    <a class="text-5xl lg:text-white font-bold ml-5">Fruit Burst</a>
                 </div>
-                <div class="navbar-end">
+                <div class="navbar-end hidden md:flex">
                     <div class="form-control">
                         <input type="text" placeholder="Search here"
-                            class="input input-bordered md:w-auto w-40 pr-32 pl-5 rounded-2xl" />
+                            class="input input-bordered md:w-auto w-40 md:pr-10 pr-32 pl-5 rounded-2xl" />
                     </div>
                 </div>
-            </div>
+              </div>
         </nav>
         <section>
             <div class="hero min-h-screen" style="background-image: url('images/banner1.png');">
@@ -79,24 +91,23 @@
                 </div>
             </div>
         </section>
-        <div class="justify-center flex bg-base-100 -my-20 w-3/4 mx-auto">
-            <figure><img src="images/fruit1.png" alt="Shoes" /></figure>
-            <figure><img src="images/fruit2.png" alt="Shoes" /></figure>
-            <figure><img src="images/fruit3.png" alt="Shoes" /></figure>
-            <figure><img src="images/fruit4.png" alt="Shoes" /></figure>
-          </div>
-        
     </header>
+    <div class="justify-center hidden md:flex bg-base-100 -my-20 w-3/4 mx-auto">
+        <figure><img src="images/fruit1.png" alt="Shoes" /></figure>
+        <figure><img src="images/fruit2.png" alt="Shoes" /></figure>
+        <figure><img src="images/fruit3.png" alt="Shoes" /></figure>
+        <figure><img src="images/fruit4.png" alt="Shoes" /></figure>
+      </div>
 
     <!-- main section code -->
 
     <main class="container mx-auto">
-        <section class="flex justify-between items-center my-28">
+        <section class="lg:flex justify-between items-center sm:my-4 md:my-28">
             <div class="">
-                <div class="hero-content text-left">
+                <div class="hero-content lg:text-left">
                     <div class="max-w-2xl">
-                        <h1 class="text-5xl font-extrabold">Deal of the day</h1>
-                        <p class="py-6 text-xl font-medium text-gray-600">Contrary to popular belief, is not simply
+                        <h1 class="text-5xl font-extrabold lg:text-left text-center">Deal of the day</h1>
+                        <p class="py-6 text-xl font-medium text-gray-600 lg:text-left text-center">Contrary to popular belief, is not simply
                             random text. It has roots in a piece of classical Latin literature from 45 BC, making it
                             over 2000 years old.</p>
                     </div>
@@ -104,7 +115,7 @@
             </div>
             <!-- countdown section -->
 
-            <div class="grid grid-flow-col gap-5 text-center auto-cols-max">
+            <div class=" grid grid-flow-col gap-5 md:gap-10 lg:text-right justify-center auto-cols-max">
                 <div class="flex flex-col">
                     <span class="countdown font-mono text-5xl font-extrabold">
                         <span style="--value:10;"></span>
@@ -133,7 +144,7 @@
         </section>
         <!-- card section -->
 
-        <section class="flex gap-6 justify-center w-full">
+        <section class="lg:flex gap-6 justify-center lg:w-full grid md:grid-cols-2 sm:grid-cols-1 justify-items-center sm:my-8">
             <div class="card w-96 bg-base-100 shadow-xl space-y-4">
                 <figure class="px-10 pt-10">
                     <img src="images/fruit6.png" alt="Apple" class="rounded-xl" />
@@ -363,7 +374,7 @@
                             old.</p>
 
                         <!-- card section -->
-                        <div class="flex">
+                        <div class="lg:flex grid md:grid-cols-2 grid-cols-1 sm:justify-items-center">
                             <div class="card w-96">
                                 <figure class="px-10 pt-10">
                                     <img src="images/member1.png" alt="Member" class="rounded-xl" />
@@ -434,7 +445,7 @@
                 <img src="images/logo.png" alt="">
                 <a class="text-5xl text-white font-bold ml-5">Fruit Burst</a>
             </div>
-            <div class="grid grid-flow-col gap-4">
+            <div class="lg:grid flex flex-wrap lg:grid-flow-col gap-4 justify-items-center">
                 <a class="link link-hover">About us</a>
                 <a class="link link-hover">Contact</a>
                 <a class="link link-hover">Jobs</a>
